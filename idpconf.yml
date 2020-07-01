@@ -1,0 +1,57 @@
+"localhost:8080":
+  ad:
+    title: Microsoft
+    idptype: microsoft
+    servicetype: staff
+    account:
+    audience:
+    auth:
+      clientid:
+      clientsecret:
+      endpoint:
+        authurl: https://login.microsoftonline.com/.../oauth2/v2.0/authorize
+        tokenurl: https://login.microsoftonline.com/.../oauth2/v2.0/token
+        authstyle: 0
+      redirecturl: https://.../auth2/ad/callback
+      scopes:
+        - openid
+    endpointprofile: https://graph.microsoft.com/v1.0/me
+  auth0:
+    title: Auth0
+    idptype: auth0
+    servicetype: manning_agent
+    account:
+    audience:
+    auth:
+      clientid:
+      clientsecret:
+      endpoint:
+        authurl: https://....auth0.com/authorize
+        tokenurl: https://....auth0.com/oauth/token
+        authstyle: 0
+      redirecturl: https://.../auth2/auth0/callback
+      scopes:
+        - openid
+        - profile
+        - email
+    endpointprofile: https://....auth0.com/userinfo
+  github:
+    title: GitHub
+    idptype: github
+    servicetype: staff
+    account: ...
+    audience: ...
+    auth:
+      clientid:
+      clientsecret:
+      endpoint:
+        authurl: https://github.com/login/oauth/authorize
+        tokenurl: https://github.com/login/oauth/access_token
+        authstyle: 0
+      redirecturl: http://localhost:8080/auth2/github/callback
+      scopes:
+        - read:user
+        - read:org
+        - user:email
+    endpointprofile: https://api.github.com/user
+    ttl: 1800s
